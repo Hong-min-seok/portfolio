@@ -3,12 +3,12 @@
 	<title>백엔드 개발자 홍민석</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/common.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="./css/common.css">
 	<script>
 	
 	var flag = false;
@@ -111,7 +111,7 @@
 		<div class="introduce_container">
 		
 			<div class="id_img">
-				<img src="img/idphoto.jpg">
+				<img src="./img/idphoto.jpg">
 			</div>
 			
 			<div class="id_text">
@@ -229,7 +229,7 @@
 					<div class="col-md-4">
 						<div class="card mb-4 box-shadow" onclick="dodam_modal()" style="cursor: pointer">
 								
-							<img src="img/dodam_thumbnail.jpg" width="100%" height="280px">	
+							<img src="./img/dodam_thumbnail.jpg" width="100%" height="280px">	
 								
 							<div class="card-body">
 								<p class="card-text">IoT를 활용한 정서발달 식물관리 서비스</p>
@@ -247,7 +247,7 @@
 					<div class="col-md-4">
 						<div class="card mb-4 box-shadow" onclick="domino_modal()" style="cursor: pointer">
 								
-							<img src="img/domino_thumbnail.png" width="100%" height="280px">	
+							<img src="./img/domino_thumbnail.png" width="100%" height="280px">	
 								
 							<div class="card-body">
 								<p class="card-text">도미노피자 클론 프로젝트</p>
@@ -266,7 +266,7 @@
 					<div class="col-md-4">
 						<div class="card mb-4 box-shadow" onclick="location.href='./diary_detail?index=${DDto.index}'" style="cursor: pointer">
 								
-							<img src="resources/img/vue_thumbnail.png" width="100%" height="280px">	
+							<img src="./img/vue_thumbnail.png" width="100%" height="280px">	
 								
 							<div class="card-body">
 								<p class="card-text">Vue.js로 구현한 일정관리 웹앱</p>
@@ -321,7 +321,7 @@
 							</div>
 						</div>
 						
-						<img src="img/dodam/DodamLogo.png" style="width:40%;">
+						<img src="./img/dodam/DodamLogo.png" style="width:40%;">
 						<p>
 							도담도담은 <pink>IoT센서</pink>를 사용해 나의 <pink>반려식물을 더 잘 키울 수 있게 도와주는 교육용 서비스</pink>입니다.
 						</p>
@@ -332,7 +332,7 @@
 							따라서 저희는, <pink>아이들이 식물을 기르는 것에 대해 더 관심을 가지도록 하여, 식물이 주는 긍정적인 영향을 받을 수 있게 해주기 위한 서비스</pink>를 기획하게 되었습니다.<br>
 						</p>
 						
-						<img src="img/dodam/흐름도.png" style="width:70%">
+						<img src="./img/dodam/흐름도.png" style="width:70%">
 						<p>
 							웹은 <pink>자바 스프링 프레임워크</pink>를 사용하여 제작하였고 데이터는 센서에서 받게되는 대량의 데이터를 저장하기 위해 <pink>NoSQL인 MongoDB</pink>를 사용했습니다.<br>
 						</p>
@@ -345,34 +345,34 @@
 							5. 등록된 기기를 통해 측정된 데이터는 스마트폰과 PC환경에서 조회가 가능합니다.
 						</p>
 						
-						<video autoplay controls loop id="Video1" muted="muted" src="img/dodam/데이터측정.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video1" muted="muted" src="./img/dodam/데이터측정.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							부착된 센서에서 값이 측정되는 모습입니다.<br>
 							이렇게 측정된 데이터는 MQTT 브로커를 통해 발행되고 Node.JS는 이를 구독해 MongoDB에 Insert합니다.
 						</p>
 						
-						<video autoplay controls loop id="Video2" muted="muted" src="img/dodam/블루투스.mp4" style="width:20%">지원 안함</video>
+						<video autoplay controls loop id="Video2" muted="muted" src="./img/dodam/블루투스.mp4" style="width:20%">지원 안함</video>
 						
 						<p>
 							스마트폰 앱에서 해당 기기를 블루투스로 검색해 와이파이를 연결해줍니다.<br>
 							등록이 완료되면 웹에서 해당 기기가 부착된 <pink>화분을 등록할 수 있고 애칭이나 식물 종류</pink>를 정할 수 있습니다.
 						</p>
 						
-						<video autoplay controls loop id="Video3" muted="muted" src="img/dodam/화분등록.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video3" muted="muted" src="./img/dodam/화분등록.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							도담도담 웹에서 기기가 부착된 화분의 애칭과 식물 종을 입력합니다.<br>
 							이렇게 반려식물의 정보가 등록되면 웹에서 화분의 상태에 대한 다양한 정보가 제공됩니다.
 						</p>
 						
-						<video autoplay controls loop id="Video4" muted="muted" src="img/dodam/온습도정보.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video4" muted="muted" src="./img/dodam/온습도정보.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							등록된 화분의 온습도 정보 탭에 들어가면 센서를 통해 측정된 데이터를 기반으로 화분의 상태를 확인할 수 있습니다.<br>
 						</p>
 						
-						<img src="img/dodam/가이드라인.png" style="width:70%">
+						<img src="./img/dodam/가이드라인.png" style="width:70%">
 						
 						<p>
 							우선, 식물 양육에 대한 기본적인 가이드라인이 제시됩니다. 식물 종에 대한 <pink>물을 주는 주기와, 채광 및 습도 정보</pink>가 제공됩니다.<br>
@@ -380,14 +380,14 @@
 							수집한 데이터는 파싱하여 데이터베이스에 저장하였고, 사용자의 식물 종에 맞추어 제공해줍니다.
 						</p>
 						
-						<img src="img/dodam/그래프.png" style="width:70%">
+						<img src="./img/dodam/그래프.png" style="width:70%">
 						
 						<p>
 							센서를 통해 측정된 데이터는 <pink>구글 차트 api</pink>를 사용해 시각화해주었습니다.<br>
 							<pink>온도, 습도 그리고 토양 수분</pink> 이렇게 세가지 데이터를 시각적으로 표현함으로서 사용자가 식물의 상태를 더 객관적으로 알수 있게 하였습니다.
 						</p>
 						
-						<img src="img/dodam/온습도비교.png" style="width:70%">
+						<img src="./img/dodam/온습도비교.png" style="width:70%">
 						
 						<p>
 							추가적으로, 센서를 통해 측정된 데이터의 평균값을 측정하고 같은 식물을 키우는 사람들과 식물 상태를 비교해볼 수도 있습니다.<br>
@@ -395,7 +395,7 @@
 							물론, 전체의 평균이 식물에게 최적의 상태라고 하긴 힘들지만, 식물을 처음 키우는 사람들에게는 좋은 가이드 라인이 될 수 있다고 생각합니다.
 						</p>
 						
-						<video autoplay controls loop id="Video5" muted="muted" src="img/dodam/물주기달력.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video5" muted="muted" src="./img/dodam/물주기달력.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							물주기 달력 탭에서는 사용자가 식물에게 물을 언제 줬는지 확인할 수 있습니다.<br>
@@ -403,7 +403,7 @@
 							따라서, 사용자가 직접 물을 준 날짜를 기록하지 않더라도 물을 준 날짜를 쉽게 확인할 수 있습니다.
 						</p>
 						
-						<video autoplay controls loop id="Video9" muted="muted" src="img/dodam/성장과정.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video9" muted="muted" src="./img/dodam/성장과정.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							해당 화분의 성장과정 탭에서는 <pink>라즈베리파이 카메라 모듈</pink>로 촬영된 화분의 사진을 확인할 수 있습니다.<br>
@@ -412,7 +412,7 @@
 							따라서 반려식물의 성장 과정이 매일 사진으로 기록되고 사용자는 이를 참고하여 식물의 상태를 파악할 수 있습니다.
 						</p>
 						
-						<video autoplay controls loop id="Video6" muted="muted" src="img/dodam/식물도감.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video6" muted="muted" src="./img/dodam/식물도감.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							식물도감 탭에서는 다양한 식물에 관한 정보를 볼 수 있습니다.<br>
@@ -421,29 +421,29 @@
 							추가적으로 다양한 식물 정보 사이트의 데이터를 크롤링해와 식물도감의 데이터로 사용하였습니다.
 						</p>
 						
-						<video autoplay controls loop id="Video7" muted="muted" src="img/dodam/관찰일지작성.mp4" style="width:70%">지원 안함</video>
-						<img src="resources/img/dodam/관찰일지상세.jpg" style="width:70%">
+						<video autoplay controls loop id="Video7" muted="muted" src="./img/dodam/관찰일지작성.mp4" style="width:70%">지원 안함</video>
+						<img src="./resources/img/dodam/관찰일지상세.jpg" style="width:70%">
 						<p>
 							사용자는 관찰일지 탭에서 해당 식물에 대한 관찰 내용과 사진을 등록할 수 있습니다.<br>
 							그리고 관찰일지를 작성하게되면, 작성된 시점으로부터 가장 최근에 측정된 센서의 데이터가 함께 기록됩니다.<br>
 							따라서 사용자는 식물의 특이사항이나 성장과정을 더욱 객관적으로 기록할 수 있습니다.
 						</p>
 						
-						<video autoplay controls loop id="Video8" muted="muted" src="img/dodam/자유게시판.mp4" style="width:70%">지원 안함</video>
+						<video autoplay controls loop id="Video8" muted="muted" src="./img/dodam/자유게시판.mp4" style="width:70%">지원 안함</video>
 						
 						<p>
 							댓글과 좋아요가 가능한 간단한 자유게시판을 구현하였습니다.<br>
 							이 공간에서 사용자는 식물과 관련해 자유롭게 소통할 수 있습니다.
 						</p>
 						
-						<img src="img/dodam/앱메인.png" style="width:70%">
+						<img src="./img/dodam/앱메인.png" style="width:70%">
 						
 						<p>
 							모바일 앱에서도 마찬가지로 등록된 화분의 정보를 확인할 수 있습니다.<br>
 							추가적으로 앱에서는 사용자에게 재미적인 요소를 충분히 더 많이 줄 수 있게끔 다양한 기능들이 구현되었습니다.
 						</p>
 						
-						<img src="img/dodam/앱통신.png" style="width:70%">
+						<img src="./img/dodam/앱통신.png" style="width:70%">
 						
 						<p>
 							안드로이드 스튜디오로 앱을 구현할 때 데이터베이스인 몽고DB 아틀라스에 직접 접근하는것이 불가능하여 Spring에서 앱 동작만을 위한 컨트롤러를 추가로 구현해주었습니다.<br>
@@ -501,7 +501,7 @@
 							</div>
 						</div>
 						
-						<img src="img/domino/domino_logo.jpg" style="width:70%">
+						<img src="./img/domino/domino_logo.jpg" style="width:70%">
 						
 						<p>
 							&nbsp;이 프로젝트는 <pink>모델2 기반의 JSP 웹 프로그래밍</pink>으로 도미노피자 웹 사이트를 재구현해 본 프로젝트입니다.<br>
@@ -509,7 +509,7 @@
 							프론트엔드는 실제 도미노피자 웹 사이트를 크롤링하여 개발하였습니다.<br>
 						</p>
 						
-						<img src="img/domino/도미노디비.png" style="width:70%">
+						<img src="./img/domino/도미노디비.png" style="width:70%">
 						<img src="img/domino/도미노디비2.PNG" style="width:70%">
 						
 						<p>
@@ -517,42 +517,42 @@
 							추가적으로 웹 사이트의 공지사항이나 이벤트와 같은 게시판을 구현하기 위해 게시판 테이블도 생성해주었습니다.
 						</p>
 						
-						<img src="img/domino/관리자로그인.png" style="width:70%">
-						<img src="img/domino/회원관리1.png" style="width:70%">
+						<img src="./img/domino/관리자로그인.png" style="width:70%">
+						<img src="./img/domino/회원관리1.png" style="width:70%">
 						
 						<p>
 							관리자 계정으로 접속하면 회원 관리, 매장 관리, 메뉴 관리, 관리자 게시판, 판매량 통계의 다섯가지 탭이 존재합니다.<br>
 							회원 관리 탭에서는 웹 사이트에 회원 가입한 회원들의 정보를 확인하고 관리 할 수 있습니다.
 						</p>
 						
-						<img src="img/domino/매장관리2.png" style="width:70%">
+						<img src="./img/domino/매장관리2.png" style="width:70%">
 						
 						<p>
 							매장관리 탭에서도 마찬가지로 등록된 매장에 대한 정보를 확인할 수 있고 새로운 매장 정보를 등록할 수 있습니다.<br>
 						</p>
 						
-						<img src="img/domino/MVC흐름도.png" style="width:70%">
+						<img src="./img/domino/MVC흐름도.png" style="width:70%">
 						
 						<p>
 							이러한 서비스들은 해당 기능을 담당하는 Action Class를 생성해 데이터베이스에 접근하여 기본적인 CRUD 연산이 가능하도록 구현하였습니다.<br>
 							각각의 Action Class들은 DAO에 접근해서 회원 및 매장 테이블에 데이터를 수정하거나 삭제, 생성하게됩니다.
 						</p>
 						
-						<img src="img/domino/메뉴관리1.png" style="width:70%">
+						<img src="./img/domino/메뉴관리1.png" style="width:70%">
 						
 						<p>
 							관리자는 메뉴관리 탭에서 피자나 사이드메뉴 혹은 음료수와 같은 메뉴들을 등록할 수 있습니다.<br>
 							이렇게 등록된 메뉴는 데이터베이스의 메뉴 테이블에 저장되게 되고 홈페이지에서 주문 가능합니다.
 						</p>
 						
-						<img src="img/domino/메뉴판.png" style="width:70%">
+						<img src="./img/domino/메뉴판.png" style="width:70%">
 						
 						<p>
 							관리자 페이지에서 등록한 메뉴들이 실제 메뉴로 등록된 모습입니다.<br>
 							원하는 메뉴를 클릭하면 메뉴를 주문할 수 있는 화면으로 이동하게됩니다.
 						</p>
 						
-						<img src="img/domino/장바구니.png" style="width:70%">
+						<img src="./img/domino/장바구니.png" style="width:70%">
 						
 						<p>
 							피자의 사이즈와 도우 그리고 토핑 등을 선택하고 주문하기를 클릭하면 선택한 메뉴들이 장바구니에 담기게됩니다.<br>
@@ -560,7 +560,7 @@
 							그리고 주문하기 버튼을 클릭하면 이 항목들이 주문 내역 테이블에 저장됩니다.
 						</p>
 						
-						<img src="img/domino/피자랭킹.png" style="width:70%">
+						<img src="./img/domino/피자랭킹.png" style="width:70%">
 						
 						<p>
 							주문내역에 저장된 메뉴들은 관리자페이지의 판매통계 탭에서 판매량 확인이 가능합니다.<br>
@@ -586,7 +586,7 @@
 		</p>
 	</div>
 	
-	<img src="img/up.png" id="MOVE_TOP_BTN">
+	<img src="./img/up.png" id="MOVE_TOP_BTN">
 	
 </body>
 
