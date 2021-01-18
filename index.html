@@ -1,0 +1,593 @@
+<html>
+<head>
+	<title>백엔드 개발자 홍민석</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="resources/css/common.css">
+	<script>
+	
+	var flag = false;
+	
+	function dodam_modal() {
+		$("#DodamModal").show();
+		$('#MOVE_TOP_BTN').fadeOut();
+		flag = true;
+	};
+	
+	function domino_modal() {
+		$("#DominoModal").show();
+		$('#MOVE_TOP_BTN').fadeOut();
+		flag = true;
+	};
+	
+	
+	$(document).on('click', 'span', function() {
+	
+		$("#DodamModal").hide();
+		$("#DominoModal").hide();
+		flag = false;
+		
+		if ($(this).scrollTop() > 500 && flag == false) {
+			$('#MOVE_TOP_BTN').fadeIn();
+		} else {
+			$('#MOVE_TOP_BTN').fadeOut();
+		}
+		
+	});
+	
+	$(document).on('click', function(event) {
+	
+		if ($("#DodamModal.modal").is(event.target)) {
+			$("#DodamModal").css({ display: "none" });
+			flag = false;
+			
+			if ($(this).scrollTop() > 500 && flag == false) {
+				$('#MOVE_TOP_BTN').fadeIn();
+			} else {
+				$('#MOVE_TOP_BTN').fadeOut();
+			}
+			
+		}
+		
+		if ($("#DominoModal.modal").is(event.target)) {
+			$("#DominoModal").css({ display: "none" });
+			flag = false;
+			
+			if ($(this).scrollTop() > 500 && flag == false) {
+				$('#MOVE_TOP_BTN').fadeIn();
+			} else {
+				$('#MOVE_TOP_BTN').fadeOut();
+			}
+			
+		}
+	});
+	
+	$(function() {	
+		document.getElementById("Video1").playbackRate = 2;
+		document.getElementById("Video2").playbackRate = 2;
+		document.getElementById("Video3").playbackRate = 2;
+		document.getElementById("Video4").playbackRate = 2;
+		document.getElementById("Video5").playbackRate = 2;
+		document.getElementById("Video6").playbackRate = 2;
+		document.getElementById("Video7").playbackRate = 2;
+	})
+	
+	$(function() {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 500 && flag == false) {
+			$('#MOVE_TOP_BTN').fadeIn();
+		} else {
+			$('#MOVE_TOP_BTN').fadeOut();
+		}
+	});
+
+	$("#MOVE_TOP_BTN").click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+	<div class="top_container">
+		<div class="title_container">
+			<p>항상, 도전하는<br><pink>백엔드</pink> 개발자 <pink>홍민석</pink>입니다.</p>
+		</div>
+	</div>
+	
+	<div class="content_container1">
+	
+		<div class="sub_title">
+			About Me
+		</div>
+		
+		<div class="introduce_container">
+		
+			<div class="id_img">
+				<img src="img/idphoto.jpg">
+			</div>
+			
+			<div class="id_text">
+				<h1>Hong Min Seok</h1>
+				<p style="display:flex; flex-wrap: wrap">
+					<div><i class="fas fa-envelope"></i>&nbsp;hms96104@naver.com&nbsp;&nbsp;&nbsp;&nbsp;</div><div><i class="fas fa-phone"></i>&nbsp;010-5657-5293</div>
+				</p>
+				<p>
+					안녕하십니까, 신입 백엔드 프로그래머 홍민석입니다. 프로그래밍이라는 영역을 접하게 되면서 그 끝없는 방대함과 매력에 빠져들게 되었습니다.
+					전공 수업에서 배우지 못한 실제 개발을 해보고 싶어 자바 기반의 웹 개발자 교육을 수료하였습니다. 교육 과정을 수료하면서 기획부터 유지보수까지
+					전반적인 개발 과정을 접해볼 수 있었습니다. 다양한 사이드 프로젝트들을 경험하면서 새로운 것들을 배우는 것이 재미있었습니다.
+					함께 일하는 개발자들과 즐겁게 소통하고 협업하면서 사람들에게 행복을 줄 수 있는 서비스를 만들어내는 것이 저의 목표입니다.
+				</p>
+			</div>
+			
+		</div>
+		
+		<button type="button" id="blogbtn" class="btn btn-outline-dark" onclick="window.open('https://blog.naver.com/hms96104')">
+			개인 블로그
+		</button>
+		
+	</div>
+	
+	<div class="content_container2">
+	
+		<div class="sub_title">
+			Skills
+		</div>
+		
+		<div class="skill_container">
+		
+			<h1 class="skill_type"><i class="fas fa-book"></i> Language</h1>
+			
+			<h2 class="skill_name">Java</h2>
+			<div class="total_bar">
+				<div class="skills java">&nbsp;</div>
+			</div>
+			<p>자바를 이용하여 웹 어플리케이션을 개발</p>
+			<p>EJB의 개념과 WAS 이용 EJB기반 코드 작성</p>
+			
+			<h2 class="skill_name">Python</h2>
+			<div class="total_bar">
+				<div class="skills python">&nbsp;</div>
+			</div>
+			<p>파이썬을 이용한 데이터 분석 및 시각화</p>
+			
+			<h2 class="skill_name">C</h2>
+			<div class="total_bar">
+				<div class="skills c">&nbsp;</div>
+			</div>
+			<p>C를 통한 자료구조 및 알고리즘에 대한 이해</p>
+			
+			<h2 class="skill_name">JavaScript</h2>
+			<div class="total_bar">
+				<div class="skills javascript">&nbsp;</div>
+			</div>
+			<p>JavaScript 내장객체, 사용자 정의 객체의 사용법과 활용법</p>
+			
+			<h2 class="skill_name">JSP</h2>
+			<div class="total_bar">
+				<div class="skills jsp">&nbsp;</div>
+			</div>
+			<p>Java Bean을 활용, Set/Get 메소드를 이용해 DB와 연동하여 DB 입출력</p>
+			<p>Model1 / Model2 기반 개발</p>
+			
+<!-- 			<h2 class="skill_name">JQuery</h2>
+			<div class="total_bar">
+				<div class="skills jquery">&nbsp;</div>
+			</div>
+			<p>JQuery를 통한 웹 애플리케이션 제어</p> -->
+			
+			
+			<h1 class="skill_type" style="margin-top:2em"><i class="fas fa-book"></i> DBMS</h1>
+			
+			<h2 class="skill_name">Oracle</h2>
+			<div class="total_bar">
+				<div class="skills oracle">&nbsp;</div>
+			</div>
+			<p>DB 설치 및 기본 SQL 작성</p>
+			<p>DB연동을 통한 웹 프로그램 개발</p>
+			
+			<h2 class="skill_name">MongoDB</h2>
+			<div class="total_bar">
+				<div class="skills mongodb">&nbsp;</div>
+			</div>
+			<p>CRUD를 통한 데이터 처리</p>
+			
+			<h1 class="skill_type" style="margin-top:2em"><i class="fas fa-book"></i> Framework</h1>
+			
+			<h2 class="skill_name">Spring</h2>
+			<div class="total_bar">
+				<div class="skills spring">&nbsp;</div>
+			</div>
+			<p>Spring AOP 개념과 활용</p>
+			<p>Spring MVC패턴 이용 WebApp 제작</p>
+			
+			<h2 class="skill_name">Vue.js</h2>
+			<div class="total_bar">
+				<div class="skills vue">&nbsp;</div>
+			</div>
+			<p>Vue.js 의 컴포넌트 개념에 대한 이해 및 웹 앱 개발</p>
+			
+			
+		</div>
+	</div>
+	
+	<div class="content_container3">
+		<div class="sub_title">
+			Project
+		</div>
+		
+		<div class="project_container">
+			
+			<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow" onclick="dodam_modal()" style="cursor: pointer">
+								
+							<img src="img/dodam_thumbnail.jpg" width="100%" height="280px">	
+								
+							<div class="card-body">
+								<p class="card-text">IoT를 활용한 정서발달 식물관리 서비스</p>
+								<p class="blog-meta">
+									2020.10 ~ 2020.12
+								</p>
+
+								<div class="d-flex justify-content-between align-items-center">
+									#JAVA #Spring #Python #MongoDB #Android #Node.JS #C #NodeMCU #RaspberryPi
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow" onclick="domino_modal()" style="cursor: pointer">
+								
+							<img src="img/domino_thumbnail.png" width="100%" height="280px">	
+								
+							<div class="card-body">
+								<p class="card-text">도미노피자 클론 프로젝트</p>
+								<p class="blog-meta">
+									2020.09.01 ~ 2020.10.14
+								</p>
+
+								<div class="d-flex justify-content-between align-items-center">
+									#JAVA #Oracle #JSP<br>&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--
+					<div class="col-md-4">
+						<div class="card mb-4 box-shadow" onclick="location.href='./diary_detail?index=${DDto.index}'" style="cursor: pointer">
+								
+							<img src="resources/img/vue_thumbnail.png" width="100%" height="280px">	
+								
+							<div class="card-body">
+								<p class="card-text">Vue.js로 구현한 일정관리 웹앱</p>
+								<p class="blog-meta">
+									2020.08.14 ~ 2020.08.28
+								</p>
+
+								<div class="d-flex justify-content-between align-items-center">
+									#Vue.js #Node.js #MongoDB<br>&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+			</div>
+			
+			
+			<div id="DodamModal" class="modal">
+				<div class="modal-content">
+				<span class="close">&times;</span>
+					<div class="modaltext">
+						<div class="modal-title">IoT를 활용한 식물관리 서비스</div>
+						<div class="link">
+							<div onclick="window.open('http://dodam9698.cafe24.com/Dodam')" style="cursor:pointer"><i class="fas fa-home"></i> 도담도담 바로가기</div>&nbsp;&nbsp;
+							<div onclick="window.open('https://github.com/Hong-min-seok/DodamDodam_Web')" style="cursor:pointer"><i class="fab fa-github"></i> 깃허브 소스코드 바로가기</div>
+						</div>
+						
+						<div class="project_inform">
+							<div>				
+								<h4>사용 기술 및 개발 환경</h4>
+								<ul>
+									<li>O/S : Windows 10(개발환경), Linux(라즈베리파이)</li>
+									<li>Server: Tomcat v9.0</li>
+									<li>DB: MongoDB</li>
+									<li>Framework/flatform : Spring, bootstrap, jQuery</li>
+									<li>Programming Language : JAVA, HTML, JavaScript, CSS, Python, C</li>
+									<li>Tool : Eclipse, Jupyter Notebook</li>
+								</ul>
+							</div>
+							<div>
+								<h4>담당 파트</h4>
+								<ul>
+									<li>파이선을 통한 Open Api 활용과 가공 및 데이터 크롤링</li>
+									<li>라즈베리파이 카메라 모듈을 이용한 사진 촬영</li>
+									<li>데이터베이스 설계</li>
+									<li>MongoTemplate를 사용한 데이터베이스로의 접근과 CRUD 연산 구현</li>
+									<li>Ajax를 통한 비동기 처리</li>
+									<li>식물도감이나 게시판 등의 JScroll을 통한 무한스크롤 구현</li>
+									<li>게시물 검색 기능</li>
+									<li>프로젝트의 전체적인 프론트엔드</li>
+								</ul>
+							</div>
+						</div>
+						
+						<img src="img/dodam/DodamLogo.png" style="width:40%;">
+						<p>
+							도담도담은 <pink>IoT센서</pink>를 사용해 나의 <pink>반려식물을 더 잘 키울 수 있게 도와주는 교육용 서비스</pink>입니다.
+						</p>
+						
+						<p>
+							이 아이디어는 최근 아동 및 청소년들의 감수성 저하와 폭력성 증가에 대한 문제로부터 시작하게 되었습니다.<br>
+							이러한 문제점들을 해결하기 위한 방법을 조사하던 중 '식물 체험 활동이 아동의 정서 발달에 긍정적인 효과를 미친다'는 연구 결과를 찾게 되었습니다.<br>
+							따라서 저희는, <pink>아이들이 식물을 기르는 것에 대해 더 관심을 가지도록 하여, 식물이 주는 긍정적인 영향을 받을 수 있게 해주기 위한 서비스</pink>를 기획하게 되었습니다.<br>
+						</p>
+						
+						<img src="img/dodam/흐름도.png" style="width:70%">
+						<p>
+							웹은 <pink>자바 스프링 프레임워크</pink>를 사용하여 제작하였고 데이터는 센서에서 받게되는 대량의 데이터를 저장하기 위해 <pink>NoSQL인 MongoDB</pink>를 사용했습니다.<br>
+						</p>
+						<p>
+							전체적인 데이터의 흐름은 다음과 같습니다.<br><br>
+							1. 아두이노 NodeMCU에 부착된 온습도 센서, 토양 수분 센서는 일정 간격으로 화분의 상태를 측정합니다.<br>
+							2. 측정된 데이터를 Hive MQTT를 이용해 Node.JS 서버로 전달합니다.<br>
+							3. Node.JS 서버는 구독해온 화분 데이터를 MongoDB에 저장합니다.<br>
+							4. 사용자는 제공되는 스마트폰 앱을 통해 하드웨어 기기를 등록합니다.<br>
+							5. 등록된 기기를 통해 측정된 데이터는 스마트폰과 PC환경에서 조회가 가능합니다.
+						</p>
+						
+						<video autoplay controls loop id="Video1" muted="muted" src="img/dodam/데이터측정.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							부착된 센서에서 값이 측정되는 모습입니다.<br>
+							이렇게 측정된 데이터는 MQTT 브로커를 통해 발행되고 Node.JS는 이를 구독해 MongoDB에 Insert합니다.
+						</p>
+						
+						<video autoplay controls loop id="Video2" muted="muted" src="img/dodam/블루투스.mp4" style="width:20%">지원 안함</video>
+						
+						<p>
+							스마트폰 앱에서 해당 기기를 블루투스로 검색해 와이파이를 연결해줍니다.<br>
+							등록이 완료되면 웹에서 해당 기기가 부착된 <pink>화분을 등록할 수 있고 애칭이나 식물 종류</pink>를 정할 수 있습니다.
+						</p>
+						
+						<video autoplay controls loop id="Video3" muted="muted" src="img/dodam/화분등록.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							도담도담 웹에서 기기가 부착된 화분의 애칭과 식물 종을 입력합니다.<br>
+							이렇게 반려식물의 정보가 등록되면 웹에서 화분의 상태에 대한 다양한 정보가 제공됩니다.
+						</p>
+						
+						<video autoplay controls loop id="Video4" muted="muted" src="img/dodam/온습도정보.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							등록된 화분의 온습도 정보 탭에 들어가면 센서를 통해 측정된 데이터를 기반으로 화분의 상태를 확인할 수 있습니다.<br>
+						</p>
+						
+						<img src="img/dodam/가이드라인.png" style="width:70%">
+						
+						<p>
+							우선, 식물 양육에 대한 기본적인 가이드라인이 제시됩니다. 식물 종에 대한 <pink>물을 주는 주기와, 채광 및 습도 정보</pink>가 제공됩니다.<br>
+							가이드라인에 대한 데이터는 식물에 대한 정보를 제공하는 기존의 웹사이트들을 <pink>파이썬을 이용해 크롤링</pink>해 데이터를 수집하였습니다.<br>
+							수집한 데이터는 파싱하여 데이터베이스에 저장하였고, 사용자의 식물 종에 맞추어 제공해줍니다.
+						</p>
+						
+						<img src="img/dodam/그래프.png" style="width:70%">
+						
+						<p>
+							센서를 통해 측정된 데이터는 <pink>구글 차트 api</pink>를 사용해 시각화해주었습니다.<br>
+							<pink>온도, 습도 그리고 토양 수분</pink> 이렇게 세가지 데이터를 시각적으로 표현함으로서 사용자가 식물의 상태를 더 객관적으로 알수 있게 하였습니다.
+						</p>
+						
+						<img src="img/dodam/온습도비교.png" style="width:70%">
+						
+						<p>
+							추가적으로, 센서를 통해 측정된 데이터의 평균값을 측정하고 같은 식물을 키우는 사람들과 식물 상태를 비교해볼 수도 있습니다.<br>
+							다른 사람들의 데이터에와 비교해 <pink>수치가 상당히 높을 경우 붉은색, 낮을 경우에는 푸른색</pink>을 띄도록 구현하였습니다.<br>
+							물론, 전체의 평균이 식물에게 최적의 상태라고 하긴 힘들지만, 식물을 처음 키우는 사람들에게는 좋은 가이드 라인이 될 수 있다고 생각합니다.
+						</p>
+						
+						<video autoplay controls loop id="Video5" muted="muted" src="img/dodam/물주기달력.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							물주기 달력 탭에서는 사용자가 식물에게 물을 언제 줬는지 확인할 수 있습니다.<br>
+							물을 줬는지 여부는 <pink>토양 수분 센서가 수치가 급격하게 증가한 경우를 Node.js서버에서 체크</pink>해 자동으로 달력에 표시되도록 구현했습니다.<br>
+							따라서, 사용자가 직접 물을 준 날짜를 기록하지 않더라도 물을 준 날짜를 쉽게 확인할 수 있습니다.
+						</p>
+						
+						<video autoplay controls loop id="Video9" muted="muted" src="img/dodam/성장과정.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							해당 화분의 성장과정 탭에서는 <pink>라즈베리파이 카메라 모듈</pink>로 촬영된 화분의 사진을 확인할 수 있습니다.<br>
+							라즈베리파이는 매일 하루에 한장씩 지정된 시간에 화분의 모습을 촬영하여 웹 서버로 전송합니다.<br>
+							웹에서 사용자는 달력에서 기간을 선택하면 해당 기간 동안의 식물의 모습을 확인할 수 있습니다.<br>
+							따라서 반려식물의 성장 과정이 매일 사진으로 기록되고 사용자는 이를 참고하여 식물의 상태를 파악할 수 있습니다.
+						</p>
+						
+						<video autoplay controls loop id="Video6" muted="muted" src="img/dodam/식물도감.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							식물도감 탭에서는 다양한 식물에 관한 정보를 볼 수 있습니다.<br>
+							약 400여 종 이상의 식물이 등록되어있으며, 식물의 양육 정보, 꽃말이나 특성 등에 대한 정보를 제공합니다.<br>
+							식물 데이터는 기본적으로 <pink>농촌진흥청에서 제공하는 Open Api</pink>를 사용했습니다. xml형식의 데이터를 파이썬을 이용해 파싱하여 데이터베이스에 저장해주었습니다.<br>
+							추가적으로 다양한 식물 정보 사이트의 데이터를 크롤링해와 식물도감의 데이터로 사용하였습니다.
+						</p>
+						
+						<video autoplay controls loop id="Video7" muted="muted" src="img/dodam/관찰일지작성.mp4" style="width:70%">지원 안함</video>
+						<img src="resources/img/dodam/관찰일지상세.jpg" style="width:70%">
+						<p>
+							사용자는 관찰일지 탭에서 해당 식물에 대한 관찰 내용과 사진을 등록할 수 있습니다.<br>
+							그리고 관찰일지를 작성하게되면, 작성된 시점으로부터 가장 최근에 측정된 센서의 데이터가 함께 기록됩니다.<br>
+							따라서 사용자는 식물의 특이사항이나 성장과정을 더욱 객관적으로 기록할 수 있습니다.
+						</p>
+						
+						<video autoplay controls loop id="Video8" muted="muted" src="img/dodam/자유게시판.mp4" style="width:70%">지원 안함</video>
+						
+						<p>
+							댓글과 좋아요가 가능한 간단한 자유게시판을 구현하였습니다.<br>
+							이 공간에서 사용자는 식물과 관련해 자유롭게 소통할 수 있습니다.
+						</p>
+						
+						<img src="img/dodam/앱메인.png" style="width:70%">
+						
+						<p>
+							모바일 앱에서도 마찬가지로 등록된 화분의 정보를 확인할 수 있습니다.<br>
+							추가적으로 앱에서는 사용자에게 재미적인 요소를 충분히 더 많이 줄 수 있게끔 다양한 기능들이 구현되었습니다.
+						</p>
+						
+						<img src="img/dodam/앱통신.png" style="width:70%">
+						
+						<p>
+							안드로이드 스튜디오로 앱을 구현할 때 데이터베이스인 몽고DB 아틀라스에 직접 접근하는것이 불가능하여 Spring에서 앱 동작만을 위한 컨트롤러를 추가로 구현해주었습니다.<br>
+							안드로이드 스튜디오에서 데이터를 통신할 때 Handler라는 곳에 필요한 데이터를 담아 http 통신을 이용해 웹 서버로 전송합니다.<br>
+							컨트롤러에서는 해당 데이터를 전달받아 필요한 로직을 동작하고 그 결과를 다시 안드로이드 스튜디오로 리턴해줍니다.<br>
+							이러한 방식으로 모바일 앱과 데이터베이스 사이의 연결 환경을 구현하였습니다.
+						</p>
+								
+						<!-- <p>
+							&nbsp;이 프로젝트는 다섯명의 팀원으로 구성되어 약 두달 정도의 기간 동안 진행된 프로젝트입니다. 프로젝트 초기에는 단순한 식물 정보 제공 사이트를 구상하였습니다.
+							아이디어를 구체화시켜 나가면서 IoT 센서와 모바일 어플리케이션을 접목하게 되었고 최종적으로 도담도담이 탄생하게 되었습니다.<br>
+							프로젝트를 시작하면서 가장 어려웠던 점은 팀원 모두가 처음 해보는 영역에 도전하게 되었다는 것입니다. 아두이노와 라즈베리파이같은 하드웨어 모듈이나 C코딩은 물론이고,
+							NoSQL 데이터베이스인 MongoDB 역시 아무도 다뤄본 적 없는 무지의 영역이었습니다. 그럼에도 불구하고 저와 팀원들은 새로운 기술들에 대한 공부와 개발을 병행하며 프로젝트를 진행시켜나갔습니다.<br>
+							프로젝트를 진행하면서 난관에 부딪힌 적도 많았지만 결과적으로 느낀 것은 '불가능은 없다'라는 것입니다. 이번 프로젝트는 저에게 새로운 것들에 대한 도전과 열정을 일깨워준 프로젝트입니다.
+							저에게 부족한 점도 뼈저리게 느낄 수 있었고, 반대로 그것들을 해결해나가며 성취감도 느낄 수 있게 해 준 가장 애착이 가는 프로젝트입니다. 	
+						</p> -->
+		
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="DominoModal" class="modal">
+				<div class="modal-content">
+				<span class="close">&times;</span>
+					<div class="modaltext">
+						<div class="modal-title">도미노피자 클론 프로젝트</div>
+						<div class="link">
+							<div onclick="window.open('https://github.com/Hong-min-seok/Team3_Domino')" style="cursor:pointer"><i class="fab fa-github"></i> 깃허브 소스코드 바로가기</div>
+						</div>
+						
+						<div class="project_inform">
+							<div>				
+								<h4>사용 기술 및 개발 환경</h4>
+								<ul>
+									<li>O/S : Windows 10(개발환경)</li>
+									<li>Server: Tomcat v9.0</li>
+									<li>DB: Oracle 11g</li>
+									<li>Framework/flatform : Spring</li>
+									<li>Programming Language : JAVA, HTML</li>
+									<li>Tool : Eclipse, SQL Developer</li>
+									<li>API : KaKao Developer</li>
+								</ul>
+							</div>
+							<div>
+								<h4>담당 파트</h4>
+								<ul>
+									<li>웹사이트 프론트엔드 코드 크롤링</li>
+									<li>Oracle JDBC를 통한 DB연동</li>
+									<li>회원가입 및 로그인 구현</li>
+									<li>파일 업로드가 가능한 게시판 구현</li>
+									<li>회원 및 매장 관리 구현</li>
+									<li>피자 판매량 통계 구현</li>
+								</ul>
+							</div>
+						</div>
+						
+						<img src="img/domino/domino_logo.jpg" style="width:70%">
+						
+						<p>
+							&nbsp;이 프로젝트는 <pink>모델2 기반의 JSP 웹 프로그래밍</pink>으로 도미노피자 웹 사이트를 재구현해 본 프로젝트입니다.<br>
+							<pink>JDBC와 MVC 패턴</pink>의 데이터 흐름 등을 직접 경험해보기 위한 백엔드 위주의 프로젝트로,<br>
+							프론트엔드는 실제 도미노피자 웹 사이트를 크롤링하여 개발하였습니다.<br>
+						</p>
+						
+						<img src="img/domino/도미노디비.png" style="width:70%">
+						<img src="img/domino/도미노디비2.PNG" style="width:70%">
+						
+						<p>
+							데이터베이스는 관계형 데이터베이스 Oracle을 사용하였습니다. 회원으로 로그인하면 피자를 주문 할 수 있도록 회원 테이블과 주문내역 그리고 메뉴 위주로 테이블을 구성하였습니다.<br>
+							추가적으로 웹 사이트의 공지사항이나 이벤트와 같은 게시판을 구현하기 위해 게시판 테이블도 생성해주었습니다.
+						</p>
+						
+						<img src="img/domino/관리자로그인.png" style="width:70%">
+						<img src="img/domino/회원관리1.png" style="width:70%">
+						
+						<p>
+							관리자 계정으로 접속하면 회원 관리, 매장 관리, 메뉴 관리, 관리자 게시판, 판매량 통계의 다섯가지 탭이 존재합니다.<br>
+							회원 관리 탭에서는 웹 사이트에 회원 가입한 회원들의 정보를 확인하고 관리 할 수 있습니다.
+						</p>
+						
+						<img src="img/domino/매장관리2.png" style="width:70%">
+						
+						<p>
+							매장관리 탭에서도 마찬가지로 등록된 매장에 대한 정보를 확인할 수 있고 새로운 매장 정보를 등록할 수 있습니다.<br>
+						</p>
+						
+						<img src="img/domino/MVC흐름도.png" style="width:70%">
+						
+						<p>
+							이러한 서비스들은 해당 기능을 담당하는 Action Class를 생성해 데이터베이스에 접근하여 기본적인 CRUD 연산이 가능하도록 구현하였습니다.<br>
+							각각의 Action Class들은 DAO에 접근해서 회원 및 매장 테이블에 데이터를 수정하거나 삭제, 생성하게됩니다.
+						</p>
+						
+						<img src="img/domino/메뉴관리1.png" style="width:70%">
+						
+						<p>
+							관리자는 메뉴관리 탭에서 피자나 사이드메뉴 혹은 음료수와 같은 메뉴들을 등록할 수 있습니다.<br>
+							이렇게 등록된 메뉴는 데이터베이스의 메뉴 테이블에 저장되게 되고 홈페이지에서 주문 가능합니다.
+						</p>
+						
+						<img src="img/domino/메뉴판.png" style="width:70%">
+						
+						<p>
+							관리자 페이지에서 등록한 메뉴들이 실제 메뉴로 등록된 모습입니다.<br>
+							원하는 메뉴를 클릭하면 메뉴를 주문할 수 있는 화면으로 이동하게됩니다.
+						</p>
+						
+						<img src="img/domino/장바구니.png" style="width:70%">
+						
+						<p>
+							피자의 사이즈와 도우 그리고 토핑 등을 선택하고 주문하기를 클릭하면 선택한 메뉴들이 장바구니에 담기게됩니다.<br>
+							장바구니의 제품들은 Session Scope에 저장되어있으며 추가로 다른 제품을 장바구니에 담게되면 이 Session Scope에 제품이 계속 저장됩니다.<br>
+							그리고 주문하기 버튼을 클릭하면 이 항목들이 주문 내역 테이블에 저장됩니다.
+						</p>
+						
+						<img src="img/domino/피자랭킹.png" style="width:70%">
+						
+						<p>
+							주문내역에 저장된 메뉴들은 관리자페이지의 판매통계 탭에서 판매량 확인이 가능합니다.<br>
+							메뉴별 판매량이 월별로 표시되며, 판매량 상위 세 개의 피자를 띄워줌으로서 인기 피자 메뉴를 알 수 있습니다.
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="content_container4">
+		<div class="sub_title">
+			Contact
+		</div>
+		<p>
+			Email : hms96104@naver.com
+		</p>
+		<p style="margin-bottom: 6em">
+			Phone : 010-5657-5293
+		</p>
+	</div>
+	
+	<img src="img/up.png" id="MOVE_TOP_BTN">
+	
+</body>
+
+</html>
